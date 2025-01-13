@@ -8,107 +8,183 @@ st.set_page_config(page_title="CV Analysis App", layout="wide")
 
 # Job templates dictionary
 JOB_TEMPLATES = {
-    "Senior Full Stack Developer": {
-        "description": "We are seeking an experienced Full Stack Developer to join our dynamic team. The ideal candidate will have a strong background in both front-end and back-end development, with expertise in modern web technologies.",
-        "company_name": "TechCorp Solutions",
-        "industry": "Information Technology",
+    "AI/ML Engineer": {
+        "description": "We are seeking a talented AI/ML Engineer to develop and implement cutting-edge machine learning models. The ideal candidate will have a strong foundation in data science and machine learning technologies.",
+        "company_name": "InnovateAI Labs",
+        "industry": "Artificial Intelligence",
         "location": "San Francisco, CA",
-        "responsibilities": """Design and implement scalable web applications
-Lead technical architecture decisions
-Mentor junior developers
+        "responsibilities": """Design and train machine learning models
+Develop scalable AI solutions
+Collaborate with data scientists and engineers
+Optimize model performance and accuracy
+Deploy AI models into production
+Keep up with AI/ML advancements""",
+        "requirements": """3+ years of experience in AI/ML development
+Strong programming skills in Python
+Experience with TensorFlow or PyTorch
+Knowledge of data preprocessing and feature engineering
+Understanding of ML algorithms and statistics
+Experience with cloud-based ML services""",
+        "preferred_quals": """PhD in AI, ML, or related fields
+Experience with NLP or computer vision
+Knowledge of reinforcement learning
+Open-source contributions""",
+        "education": "Master's degree in Computer Science or related field",
+        "experience": "3+ years",
+        "schedule": "40 hours per week",
+    },
+    "Full Stack Developer": {
+        "description": "We are seeking a skilled Full Stack Developer to create end-to-end web solutions. The ideal candidate will excel in both front-end and back-end development, with a strong command of modern frameworks.",
+        "company_name": "TechSolutions Inc.",
+        "industry": "Software Development",
+        "location": "Austin, TX",
+        "responsibilities": """Develop scalable web applications
+Work on both client-side and server-side components
 Collaborate with cross-functional teams
+Optimize performance and security
+Write clean, maintainable code
+Troubleshoot and debug issues""",
+        "requirements": """3+ years of experience in full-stack development
+Proficiency in JavaScript frameworks (React, Node.js)
+Experience with RESTful APIs and databases
+Knowledge of HTML5, CSS3, and JavaScript
+Version control with Git
+Understanding of microservices architecture""",
+        "preferred_quals": """Experience with TypeScript
+Knowledge of Docker and Kubernetes
+Experience with cloud platforms (AWS, Azure)
+UI/UX sensibilities""",
+        "education": "Bachelor's degree in Computer Science or equivalent experience",
+        "experience": "3+ years",
+        "schedule": "40 hours per week",
+    },
+    "MERN Stack Developer": {
+        "description": "We are hiring a MERN Stack Developer to build dynamic web applications using the MERN (MongoDB, Express, React, Node.js) technology stack. The ideal candidate will have expertise in developing full-stack solutions.",
+        "company_name": "NextGen Web Solutions",
+        "industry": "Software Development",
+        "location": "New York, NY",
+        "responsibilities": """Develop and maintain web applications using the MERN stack
+Design and manage database architecture
+Collaborate with UI/UX designers and backend teams
 Optimize application performance
-Implement security best practices""",
-        "requirements": """5+ years of experience in full-stack development
-Strong proficiency in React, Node.js, and Python
-Experience with cloud services (AWS/Azure)
-Strong understanding of database design
-Experience with microservices architecture
-Excellent problem-solving skills""",
-        "preferred_quals": """Experience with Kubernetes
-Knowledge of DevOps practices
-Machine learning experience
-Open source contributions""",
+Implement security best practices
+Test and debug applications""",
+        "requirements": """2+ years of experience with the MERN stack
+Strong proficiency in React and Node.js
+Experience with MongoDB and Express.js
+Knowledge of JavaScript, HTML5, and CSS3
+Version control with Git
+Understanding of RESTful APIs""",
+        "preferred_quals": """Experience with TypeScript
+Knowledge of Redux or Context API
+Performance optimization skills
+Understanding of CI/CD pipelines""",
         "education": "Bachelor's degree in Computer Science or related field",
-        "experience": "5+ years",
+        "experience": "2+ years",
+        "schedule": "40 hours per week",
+    },
+    "DevOps Engineer": {
+        "description": "We are looking for a talented DevOps Engineer to enhance our development and deployment pipelines. The ideal candidate will have strong expertise in automation and cloud infrastructure management.",
+        "company_name": "CloudOps Innovations",
+        "industry": "Cloud Computing",
+        "location": "Seattle, WA",
+        "responsibilities": """Develop and manage CI/CD pipelines
+Automate infrastructure provisioning
+Monitor and optimize system performance
+Manage cloud environments
+Ensure infrastructure security
+Collaborate with engineering teams""",
+        "requirements": """3+ years of experience in DevOps
+Proficiency in Docker and Kubernetes
+Experience with cloud platforms (AWS, Azure, GCP)
+Strong scripting skills (Python, Bash)
+Knowledge of infrastructure as code (Terraform, Ansible)
+Understanding of system monitoring tools""",
+        "preferred_quals": """Experience with multi-cloud environments
+Knowledge of ELK stack
+Security certifications
+Experience with serverless computing""",
+        "education": "Bachelor's degree in Computer Science or equivalent experience",
+        "experience": "3+ years",
+        "schedule": "40 hours per week",
+    },
+    "Python Developer": {
+        "description": "Seeking a Python Developer to build and maintain efficient server-side applications. The ideal candidate will have expertise in Python and experience with APIs and databases.",
+        "company_name": "PythonPro Solutions",
+        "industry": "Software Development",
+        "location": "Chicago, IL",
+        "responsibilities": """Develop and maintain backend applications
+Design and implement APIs
+Work with databases (SQL and NoSQL)
+Optimize application performance
+Debug and resolve issues
+Collaborate with cross-functional teams""",
+        "requirements": """3+ years of Python development experience
+Proficiency in frameworks like Django or Flask
+Experience with RESTful APIs
+Knowledge of database systems
+Understanding of software testing
+Version control with Git""",
+        "preferred_quals": """Experience with cloud platforms (AWS, GCP)
+Knowledge of async programming
+Understanding of DevOps practices
+Machine learning experience""",
+        "education": "Bachelor's degree in Computer Science or equivalent experience",
+        "experience": "3+ years",
         "schedule": "40 hours per week",
     },
     "Frontend Developer": {
-        "description": "Looking for a talented Frontend Developer to create responsive and user-friendly web interfaces. The ideal candidate will have strong UI/UX sensibilities and expertise in modern frontend frameworks.",
-        "company_name": "WebFront Innovations",
+        "description": "Looking for a Frontend Developer to create engaging and user-friendly web interfaces. The ideal candidate will have a strong focus on responsive design and user experience.",
+        "company_name": "WebUX Innovations",
         "industry": "Software Development",
-        "location": "New York, NY",
-        "responsibilities": """Develop responsive web applications
+        "location": "Boston, MA",
+        "responsibilities": """Develop and maintain responsive web applications
 Implement UI/UX designs
 Optimize frontend performance
-Write clean, maintainable code
-Collaborate with designers
-Conduct code reviews""",
+Write reusable code and libraries
+Collaborate with designers and developers
+Conduct code reviews and testing""",
         "requirements": """3+ years of frontend development experience
-Expertise in React or Vue.js
-Strong HTML5, CSS3, and JavaScript skills
+Expertise in React, Vue.js, or Angular
+Strong skills in HTML5, CSS3, and JavaScript
 Experience with responsive design
 Knowledge of frontend testing frameworks
 Version control with Git""",
         "preferred_quals": """Experience with TypeScript
-Knowledge of Redux or Vuex
+Knowledge of state management (Redux, Vuex)
 UI/UX design experience
-Performance optimization skills""",
+Optimization for accessibility""",
         "education": "Bachelor's degree in Computer Science or equivalent experience",
         "experience": "3+ years",
         "schedule": "40 hours per week",
     },
     "Backend Developer": {
-        "description": "Seeking a skilled Backend Developer to build and maintain server-side applications. The ideal candidate will have strong expertise in API development and database management.",
-        "company_name": "ServerSide Tech",
+        "description": "We are seeking a Backend Developer to design and maintain server-side logic and architecture. The ideal candidate will have expertise in APIs, databases, and scalable system design.",
+        "company_name": "BackendTech Co.",
         "industry": "Software Development",
-        "location": "Austin, TX",
-        "responsibilities": """Design and implement RESTful APIs
-Manage database architecture
-Optimize server performance
-Implement security measures
-Write automated tests
-Handle system integration""",
+        "location": "Los Angeles, CA",
+        "responsibilities": """Develop and maintain server-side applications
+Design and implement APIs
+Manage database systems
+Optimize application performance
+Ensure data security and compliance
+Collaborate with frontend and DevOps teams""",
         "requirements": """4+ years of backend development experience
-Strong Python or Node.js expertise
+Proficiency in Python, Java, or Node.js
 Experience with SQL and NoSQL databases
-Knowledge of API design principles
-Understanding of cloud services
-Experience with microservices""",
-        "preferred_quals": """Experience with Docker
-Knowledge of message queues
-Familiarity with GraphQL
-Security certification""",
+Knowledge of API design and development
+Understanding of microservices architecture
+Version control with Git""",
+        "preferred_quals": """Experience with Docker and Kubernetes
+Knowledge of GraphQL
+Understanding of CI/CD pipelines
+Experience with cloud platforms""",
         "education": "Bachelor's degree in Computer Science or related field",
         "experience": "4+ years",
         "schedule": "40 hours per week",
-    },
-    "DevOps Engineer": {
-        "description": "Looking for a DevOps Engineer to streamline our development and deployment processes. The ideal candidate will have strong automation and infrastructure management skills.",
-        "company_name": "CloudOps Solutions",
-        "industry": "Cloud Computing",
-        "location": "Seattle, WA",
-        "responsibilities": """Manage CI/CD pipelines
-Implement infrastructure as code
-Monitor system performance
-Automate deployment processes
-Manage cloud infrastructure
-Implement security measures""",
-        "requirements": """3+ years of DevOps experience
-Strong Linux/Unix administration skills
-Experience with AWS or Azure
-Expertise in Docker and Kubernetes
-Knowledge of Python or Shell scripting
-Experience with monitoring tools""",
-        "preferred_quals": """Security certifications
-Experience with Terraform
-Knowledge of ELK stack
-Multi-cloud experience""",
-        "education": "Bachelor's degree in Computer Science or equivalent experience",
-        "experience": "3+ years",
-        "schedule": "40 hours per week",
     }
 }
+
 
 
 # Initialize session state for storing all data
