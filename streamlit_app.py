@@ -7,35 +7,6 @@ from PIL import Image
 # Set page config
 st.set_page_config(page_title="CV Analysis App", layout="wide")
 
-# Center the logo using custom CSS
-st.markdown(
-    """
-    <style>
-    .logo-container {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 2rem;
-    }
-    .logo-container svg {
-        width: 200px;
-        height: auto;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
-# Display centered logo using SVG
-with open("logo.svg", "r") as f:
-    svg_content = f.read()
-    
-st.markdown(
-    f'<div class="logo-container">{svg_content}</div>',
-    unsafe_allow_html=True
-)
-
-
-
 # Job templates dictionary
 JOB_TEMPLATES = {
     "AI/ML Engineer": {
