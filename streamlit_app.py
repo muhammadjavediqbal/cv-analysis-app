@@ -139,7 +139,7 @@ def main():
         if st.button("Process CV"):
             with st.spinner('Processing CV... Please wait'):
                 files = {"file": uploaded_file}
-                response = requests.post("http://localhost:2020/convert-cv-to-json/", files=files)
+                response = requests.post("https://jinnaylst-cv-module-542808340038.us-central1.run.app/convert-cv-to-json/", files=files)
                 
                 if response.status_code == 200:
                     result = response.json()
@@ -158,7 +158,7 @@ def main():
     if check_relevancy:
         with st.spinner('Analyzing CV relevancy... Please wait'):
             response = requests.post(
-                "http://localhost:2020/check_cv_relevancy/",
+                "https://jinnaylst-cv-module-542808340038.us-central1.run.app/check_cv_relevancy/",
                 json=st.session_state.app_state['cv_data']
             )
             
@@ -186,7 +186,7 @@ def main():
     if improve_cv:
         with st.spinner('Generating CV improvements... Please wait'):
             improvements_response = requests.post(
-                "http://localhost:2020/improved_cv/",
+                "https://jinnaylst-cv-module-542808340038.us-central1.run.app/improved_cv/",
                 json={
                     "cv_data": st.session_state.app_state['cv_data'],
                     "improvements": {
@@ -316,7 +316,7 @@ def main():
                 }
                 
                 response = requests.post(
-                    "http://localhost:2020/submit-job-and-cv/",
+                    "https://jinnaylst-cv-module-542808340038.us-central1.run.app/submit-job-and-cv/",
                     json={
                         "job_description": job_data,
                         "cv": st.session_state.app_state['cv_data']
@@ -352,7 +352,7 @@ def main():
     if generate_assessment:
         with st.spinner('Generating assessment test... Please wait'):
             response = requests.post(
-                "http://localhost:2020/assign_assessment_test/",
+                "https://jinnaylst-cv-module-542808340038.us-central1.run.app/assign_assessment_test/",
                 json=st.session_state.app_state['cv_data']
             )
             
@@ -399,7 +399,7 @@ def main():
                     }
                 st.write(f"{data_json}")
                 scoring_response = requests.post(
-                    "http://localhost:2020/scoring_assessment_test/",
+                    "https://jinnaylst-cv-module-542808340038.us-central1.run.app/scoring_assessment_test/",
                     # json={
                     #     "test": st.session_state.app_state['assessment_data'],
                     #     "solution": {"code": solution}
