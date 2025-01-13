@@ -16,14 +16,18 @@ st.markdown(
         justify-content: center;
         margin-bottom: 2rem;
     }
+    .logo-img {
+        width: 200px;  /* Adjust this value to make the logo smaller */
+        height: auto;
+    }
     </style>
     """,
     unsafe_allow_html=True
 )
 
-# Display centered logo in original dimensions
+# Display centered logo with custom size
 st.markdown('<div class="logo-container">', unsafe_allow_html=True)
-st.image("logo.png", use_column_width=False)
+st.image("logo.png", width=200)  # Set width to match CSS
 st.markdown('</div>', unsafe_allow_html=True)
 
 
