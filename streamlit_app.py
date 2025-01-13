@@ -16,15 +16,23 @@ st.markdown(
         justify-content: center;
         margin-bottom: 2rem;
     }
+    .logo-container svg {
+        width: 200px;
+        height: auto;
+    }
     </style>
     """,
     unsafe_allow_html=True
 )
 
-# Display centered logo
-st.markdown('<div class="logo-container">', unsafe_allow_html=True)
-st.image("logo.png", width=200)
-st.markdown('</div>', unsafe_allow_html=True)
+# Display centered logo using SVG
+with open("logo.svg", "r") as f:
+    svg_content = f.read()
+    
+st.markdown(
+    f'<div class="logo-container">{svg_content}</div>',
+    unsafe_allow_html=True
+)
 
 
 
