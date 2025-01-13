@@ -397,7 +397,7 @@ def main():
                         "test": st.session_state.app_state['assessment_data'],
                         "solution": {"code": solution}
                     }
-                st.write(f"{data_json}")
+                # st.write(f"{data_json}")
                 scoring_response = requests.post(
                     "https://jinnaylst-cv-module-542808340038.us-central1.run.app/scoring_assessment_test/",
                     # json={
